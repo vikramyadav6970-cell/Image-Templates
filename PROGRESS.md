@@ -19,17 +19,17 @@ Blockers/decisions:
 ## 2026-08-06 — Antigravity (Phase 2 Share Flow)
 Done:
 - Installed `@vercel/blob` dependency.
-- Created `app/api/upload/route.ts` API route for raw binary image uploads to Vercel Blob.
-- Created `app/share/[imageId]/page.tsx` as a Server Component supporting custom title/description metadata, with an immediate inline JS redirect fallback to home page `/`.
+- Created `app/api/upload/route.ts` API route for raw binary image uploads to Vercel Blob, using `arrayBuffer` for broad environment runtime compatibility.
+- Created `app/share/[imageId]/page.tsx` as a Server Component displaying the generated PFP image centered, with a Call-to-Action linking back to the homepage `/` to "Create Your Own PFP Frame".
 - Created `app/share/[imageId]/opengraph-image.tsx` dynamic route proxying the stored image from Vercel Blob using URL-safe Base64 decode.
 - Built the `ShareButton` component to handle Vercel Blob uploading, Base64 ID calculation, cache logic, and X Web Intent generation.
 - Modified `app/page.tsx` to integrate the X Share button, track `shareUrl` dynamically, and clear states on reset.
+- Configured dynamic `metadataBase` in `app/layout.tsx` to ensure Vercel automatically compiles absolute URLs for dynamic Open Graph and Twitter image cards.
 - Verified local linting and compilation successfully via `npm run lint` and `npm run build`.
 Next:
-- Staging/production deployment to Vercel.
-- Configure `BLOB_READ_WRITE_TOKEN` env variable on Vercel deployment settings.
+- Deploy to Vercel and configure `BLOB_READ_WRITE_TOKEN` env variable.
 - Manually test and verify the live URL preview behavior on X.
-- Swap in final branded frame assets (once provided by organizers) in `public/frame.png`.
+- Swap in final branded frame assets in `public/frame.png`.
 Blockers/decisions:
 - Encoded the Vercel Blob URLs in URL-safe Base64 strings to form `/share/[imageId]` paths, making the metadata proxy domain-agnostic and robust across all development/staging/production configurations.
 - Dynamic metadata image previews must be verified in a live deployment environment because local dev environments cannot be scraped directly by X's link preview crawlers.
