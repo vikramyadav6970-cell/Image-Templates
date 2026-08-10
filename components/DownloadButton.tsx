@@ -26,7 +26,7 @@ export function DownloadButton({ imageBlob }: DownloadButtonProps) {
   return (
     <button
       onClick={handleDownload}
-      className="flex items-center justify-center space-x-2.5 w-full max-w-md py-3.5 px-6 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-emerald-400 to-cyan-400 hover:from-emerald-300 hover:to-cyan-300 shadow-[0_4px_20px_rgba(16,185,129,0.25)] hover:shadow-[0_4px_25px_rgba(16,185,129,0.4)] active:scale-[0.98] transition-all duration-200 cursor-pointer"
+      className="flex items-center justify-center space-x-2.5 w-full max-w-md py-3.5 px-6 rounded-xl font-bold text-black bg-[#FDFDF5] hover:bg-[#FFD400] border-2 border-black flat-shadow flat-shadow-hover transition-all duration-100 cursor-pointer"
     >
       <svg
         className="w-5.5 h-5.5"
