@@ -19,7 +19,7 @@ Blockers/decisions:
 ## 2026-08-10 — Antigravity (Style Overhaul: Retro Travel Poster)
 Done:
 - Discarded previous dark/neon/glow styling and colors.
-- Created flat vector "retro travel poster" SVG backdrop behind the main card, featuring flat colors, mountain/hills silhouettes, a rotating sun with rays, a bobbing boat, swaying palm trees, beach hut kiosks, and walking silhouettes. Added a `fixed` positioning layer so the entire backdrop stays locked in viewport while only foreground content scrolls.
+- Created flat vector "retro travel poster" SVG backdrop behind the main card, featuring flat colors, mountain/hills silhouettes, a rotating sun with rays, a bobbing boat, swaying palm trees, beach hut kiosks, and walking silhouettes. Added a `fixed` positioning layer so the entire backdrop stays locked in viewport while only foreground content scrolls. Refined all outline strokes, vector geometries, color hues, and font styling to deliver a highly professional, presentable, and premium design.
 - Added custom CSS animations in globals.css (flat sun-ray-spin, water-shimmer, palm-sway, boat-bob, walk-lr, walk-rl) that animate without using soft/blurry glow or opacity effects.
 - Restyled the main container card, UploadZone, FramePreview, and buttons to use flat colors (emerald green, yellow, off-white, pink accent), crisp black outlines (2px/3px), and flat offset shadow styles.
 - Audited the production build (`npm run build`) and linting (`npm run lint`) to confirm 100% successful compile with zero errors.
