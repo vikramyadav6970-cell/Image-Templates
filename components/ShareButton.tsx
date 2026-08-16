@@ -91,18 +91,18 @@ export function ShareButton({
     <button
       onClick={handleShare}
       disabled={isUploading}
-      className={`flex items-center justify-center space-x-2.5 w-full max-w-md py-3.5 px-6 rounded-xl font-bold transition-all duration-200 cursor-pointer
+      className={`flex items-center justify-center space-x-2.5 w-full max-w-md py-3.5 px-6 rounded-xl font-bold transition-all duration-100 cursor-pointer border-2 border-black flat-shadow flat-shadow-hover
         ${
           isUploading
-            ? "bg-slate-800 text-slate-500 border border-slate-700/50 pointer-events-none"
-            : "bg-[#1DA1F2] hover:bg-[#1a91da] text-white shadow-[0_4px_20px_rgba(29,161,242,0.25)] hover:shadow-[0_4px_25px_rgba(29,161,242,0.4)] active:scale-[0.98]"
+            ? "bg-[#E6197A]/40 text-black/50 pointer-events-none"
+            : "bg-[#E6197A] text-white"
         }
       `}
     >
       {isUploading ? (
         <>
           <svg
-            className="w-5 h-5 animate-spin"
+            className="w-5.5 h-5.5 animate-spin"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

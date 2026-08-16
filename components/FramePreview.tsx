@@ -8,14 +8,14 @@ interface FramePreviewProps {
 
 export function FramePreview({ imageUrl }: FramePreviewProps) {
   return (
-    <div className="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden bg-slate-950 border border-slate-800/80 shadow-[0_10px_30px_rgba(0,0,0,0.5)] group">
+    <div className="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden bg-[#0D2E18] border-3 border-black flat-shadow group">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={imageUrl}
         alt="HH Goa 2026 Branded PFP"
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.01]"
       />
-      <div className="absolute top-3 left-3 bg-emerald-500/90 text-slate-950 text-[10px] font-bold uppercase tracking-wider py-1 px-2.5 rounded-full shadow-[0_2px_10px_rgba(16,185,129,0.3)]">
+      <div className="absolute top-3 left-3 bg-[#FFD400] text-black text-[10px] font-extrabold uppercase tracking-widest py-1 px-3.5 rounded-full border-2 border-black flat-shadow">
         Ready
       </div>
     </div>
